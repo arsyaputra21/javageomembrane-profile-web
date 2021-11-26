@@ -6,36 +6,42 @@ import styled from "styled-components";
 import ActionButton from "./ActionButton";
 import Layout from "../components/Layout";
 import { color } from "../constants";
-import TitleText from "./TitleText";
 
 const LandingPageStyled = styled.div`
   div {
     div.left-col {
       text-align: justify;
+      line-height: 2;
+      h1 {
+        font-size: 2.5rem;
+      }
+
       div {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
       }
       div.button-box {
-        div {
-          width: 50%;
-          font-size: 1.2rem;
-          font-weight: bold;
-        }
+        display: flex;
+
+        align-items: center;
+        width: 100%;
       }
     }
     div.right-col {
       img {
-        width: 100%;
+        max-width: 100%;
       }
     }
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
       div.left-col {
+        h1 {
+          text-align: center;
+          font-size: 2rem;
+        }
+
         div.button-box {
-          div {
-            width: 100%;
-          }
+          justify-content: center;
         }
       }
       div.right-col {
@@ -50,27 +56,27 @@ function LandingPage() {
     <Layout backgroundColor={color.mainWhite}>
       <LandingPageStyled>
         <Row>
-          <Col className="left-col" lg={6}>
+          <Col className="left-col" data-aos="fade-right" lg={6}>
             <Row>
-              <TitleText>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-                doloremque.
-              </TitleText>
+              <h1>Selamat Datang di PT. Java Geomembrane</h1>
             </Row>
             <Row>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Aperiam commodi asperiores voluptatibus reprehenderit est
-                exercitationem odio doloribus! Architecto illum illo provident
-                iure unde culpa inventore asperiores voluptas, mollitia debitis
-                corporis.
+                Solusi Terbaik atas Kebutuhan Geomembrane dan Produk Geotextile.
+                Memberikan Kualitas dan Kepuasan sejak 2010.
               </p>
             </Row>
             <Row className="button-box">
-              <ActionButton>Lihat Catalog</ActionButton>
+              <ActionButton
+                backgroundColor="#ffaa46"
+                width="60%"
+                href="#about-us"
+              >
+                Lihat Catalog
+              </ActionButton>
             </Row>
           </Col>
-          <Col lg={6} className="right-col">
+          <Col lg={6} className="right-col" data-aos="fade-left">
             <img src={EngineerImage} alt="engineer illustration" />
           </Col>
         </Row>

@@ -9,7 +9,7 @@ const LayoutStyled = styled.div`
 
 function Layout(props) {
   return (
-    <LayoutStyled backgroundColor={props.backgroundColor}>
+    <LayoutStyled backgroundColor={props.backgroundColor || "#fff"}>
       {props.children}
     </LayoutStyled>
   );

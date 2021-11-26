@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const ButtonStyled = styled.a`
+const ButtonStyled = styled(Link)`
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -34,18 +34,17 @@ const ButtonStyled = styled.a`
   }
 `;
 
-function ActionButton(props) {
+function ActionButtonLink(props) {
   return (
     <ButtonStyled
       backgroundColor={props.backgroundColor || "#4662ff"}
       width={props.width}
-      href={props.href}
+      to={props.to}
       role="button"
-      target={props.target}
     >
       {props.children}
     </ButtonStyled>
   );
 }
 
-export default ActionButton;
+export default ActionButtonLink;

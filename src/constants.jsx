@@ -1,3 +1,3 @@
-const color = { mainBlue: "#4662FF", mainWhite: "#fff" };
+const color = { mainBlue: "#1f287a", mainWhite: "#fff" };
 
 export { color };
