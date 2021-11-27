@@ -6,6 +6,7 @@ const CardStyled = styled.div`
   padding: 2rem;
   display: flex;
   flex-direction: column;
+
   h4 {
     text-align: center;
     font-size: 1.6rem;

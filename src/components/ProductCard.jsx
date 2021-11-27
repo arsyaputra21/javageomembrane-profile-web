@@ -71,6 +71,17 @@ const CardStyled = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 400px) {
+    div.card-row {
+      div.desc-col {
+        div.desc-text {
+          p {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
 `;
 function ProductCard({ namaProduk, shortDesc, thumbnail, id }) {
   return (

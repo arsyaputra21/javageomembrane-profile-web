@@ -9,6 +9,7 @@ import { color } from "../constants";
 
 const LandingPageStyled = styled.div`
   div {
+    padding-bottom: 2rem;
     div.left-col {
       text-align: justify;
       line-height: 2;
@@ -34,7 +35,9 @@ const LandingPageStyled = styled.div`
 
     @media only screen and (max-width: 768px) {
       flex-direction: column-reverse;
+      padding-bottom: 0;
       div.left-col {
+        text-align: center;
         h1 {
           text-align: center;
           font-size: 2rem;
@@ -48,6 +51,13 @@ const LandingPageStyled = styled.div`
         margin-bottom: 0.75rem;
       }
     }
+    @media only screen and (max-width: 400px) {
+      div.left-col {
+        h1 {
+          font-size: 1.7rem;
+        }
+      }
+    }
   }
 `;
 
@@ -56,7 +66,7 @@ function LandingPage() {
     <Layout backgroundColor={color.mainWhite}>
       <LandingPageStyled>
         <Row>
-          <Col className="left-col" data-aos="fade-right" lg={6}>
+          <Col className="left-col" lg={6}>
             <Row>
               <h1>Selamat Datang di PT. Java Geomembrane</h1>
             </Row>
@@ -72,11 +82,11 @@ function LandingPage() {
                 width="60%"
                 href="#about-us"
               >
-                Lihat Catalog
+                Lebih Lanjut
               </ActionButton>
             </Row>
           </Col>
-          <Col lg={6} className="right-col" data-aos="fade-left">
+          <Col lg={6} className="right-col">
             <img src={EngineerImage} alt="engineer illustration" />
           </Col>
         </Row>

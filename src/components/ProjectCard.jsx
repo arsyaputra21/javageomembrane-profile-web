@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ProjectCardStyled = styled.div`
   border: solid rgba(0, 0, 0, 0.2) 0.5px;
   border-radius: 5px;
-  box-shadow: #ababab 0px 3px 10px 3px;
+
   img {
     width: 100%;
     border-radius: 5px 5px 0 0;
@@ -22,7 +22,7 @@ const ProjectCardStyled = styled.div`
 
 const ProjectCard = ({ image, caption }) => {
   return (
-    <ProjectCardStyled data-aos="zoom-in-up">
+    <ProjectCardStyled>
       <img src={image} alt="project-image" />
 
       <div className="caption-container">

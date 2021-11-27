@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 
 import { ProjectData } from "../ProductData";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import styled from "styled-components";
 import TitleText from "../components/TitleText";
 import ProjectCard from "../components/ProjectCard";
 
 const ProjectStyled = styled.div`
   margin: 0 auto;
-  padding: 0 1rem;
 
   div.project-gallery {
     padding: 1rem 2rem;
@@ -32,7 +30,7 @@ const ProjectStyled = styled.div`
   }
   @media (max-width: 600px) {
     div.project-gallery {
-      padding: 1rem 0;
+      padding: 0 1rem;
     }
     div.project-list {
       font-size: 0.9rem;
@@ -42,9 +40,6 @@ const ProjectStyled = styled.div`
 
 // const slides = [illustration1, illustration2, illustration3, illustration4];
 function About() {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
   return (
     <ProjectStyled>
       <TitleText>Projects</TitleText>

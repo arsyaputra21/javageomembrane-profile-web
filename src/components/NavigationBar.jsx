@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import styled from "styled-components";
 import ProductData from "../ProductData";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 
 const NavbarStyled = styled.div`
   padding: 2rem 4rem;
@@ -16,8 +17,21 @@ const NavbarStyled = styled.div`
       height: 100px;
     }
   }
+
+  div.dropdown-menu {
+    position: absolute;
+
+    left: -70px;
+    a.dropdown-item {
+      font-size: 0.8rem;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 2rem 2rem 1rem;
+    div.dropdown-menu {
+      left: 5px;
+    }
     a.navbar-brand {
       flex-direction: column;
       img {
@@ -37,22 +51,28 @@ function NavigationBar() {
   return (
     <NavbarStyled>
       <Navbar expand="lg" variant="light">
-        <Navbar.Brand href="/">
+        <Link className="navbar-brand" to="/" exact>
           <img src={logo} alt="logo" />
-        </Navbar.Brand>
+        </Link>
 
         <Navbar.Toggle aria-controls="navbar-toggle" />
         <Navbar.Collapse id="navbar-toggle">
           <Nav className="ms-auto">
-            <Nav.Link href="/">HOME</Nav.Link>
-            <NavDropdown align="right" title="PRODUCTS">
+            <Link className="nav-link" to="/" exact>
+              HOME
+            </Link>
+
+            <NavDropdown alignRight title="PRODUCTS">
               {ProductData.map((data, idx) => (
-                <NavDropdown.Item href={`/product/${data.id}`}>
+                <Link className="dropdown-item" to={`/product/${data.id}`}>
                   {data.name}
-                </NavDropdown.Item>
+                </Link>
               ))}
             </NavDropdown>
-            <Nav.Link href="/project">PROJECT</Nav.Link>
+
+            <Link className="nav-link" to="/project">
+              PROJECT
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

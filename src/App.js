@@ -4,9 +4,10 @@ import "./App.css";
 import Projects from "./pages/Projects";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
-import NavigationBar from "./components/NavigationBar";
+
 import Footer from "./components/Footer";
 import FloatingWhatsapp from "./components/FloatingWhatsapp";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
   return (

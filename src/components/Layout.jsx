@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Container from "react-bootstrap/Container";
 
 const LayoutStyled = styled.div`
+  overflow: hidden;
   background-color: ${(props) => props.backgroundColor};
   padding: 4rem;
 `;

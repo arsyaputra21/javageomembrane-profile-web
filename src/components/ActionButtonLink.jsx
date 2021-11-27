@@ -32,6 +32,10 @@ const ButtonStyled = styled(Link)`
   svg {
     margin-left: 8px;
   }
+  @media (max-width: 400px) {
+    font-size: 0.8rem;
+    transform: scale(0.8);
+  }
 `;
 
 function ActionButtonLink(props) {
